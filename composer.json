@@ -1,0 +1,8 @@
+{
+    "name": "pekhov/stell",
+    "description": "Helper for opencart migrations",
+    "type": "liibrary",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {}
+}
