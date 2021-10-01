@@ -1,8 +1,12 @@
 {
     "name": "pekhov/stell",
     "description": "Helper for opencart migrations",
+    "homepage": "https://github.com/Pekhov14/stell",
     "type": "liibrary",
     "license": "MIT",
     "minimum-stability": "dev",
+    "config": {
+        "vendor-dir": "bin"
+    },
     "require": {}
 }
