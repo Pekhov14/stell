@@ -8,7 +8,7 @@
     "require": {},
     "scripts": {
         "post-autoload-dump": [
-            "cp -r vendor/aheinze/cockpit bin"
+            "cp -r vendor/pekhov/stell bin"
         ]
     }
 }
