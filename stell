@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 
-// v1.0.2
+// v1.0.3
 
 switch($argv[1]) {
     case 'make':

@@ -5,8 +5,10 @@
     "type": "liibrary",
     "license": "MIT",
     "minimum-stability": "dev",
-    "config": {
-        "vendor-dir": "bin"
-    },
-    "require": {}
+    "require": {},
+    "scripts": {
+        "post-autoload-dump": [
+            "cp -r vendor/aheinze/cockpit bin"
+        ]
+    }
 }
