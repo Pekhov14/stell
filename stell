@@ -1,47 +1,20 @@
 #!/usr/bin/php
 <?php
 
-// v1.0.6
-
-//require_once(__DIR__ . '/../config.php');
+require_once(__DIR__ . '/../config.php');
+require_once(__DIR__ . '/src/Stell.php');
 
 $code = (isset($argv[1]) ? $argv[1] : '');
+$stell = new Stell(__DIR__);
 
 switch($argv[1]) {
     case 'make':
-        date_default_timezone_set('UTC');
-
-        $fileName = 'update' . date('Y-m-d');
-
-        echo "created file for migration - \033[32m  $fileName \033[0m " . PHP_EOL;
-
-        if (!file_exists(__DIR__ . '/sql')) {
-            mkdir(__DIR__ . '/sql', 0777, true);
-        }
-
-        $handle = file_put_contents(__DIR__ . "/sql/$fileName.php", "<?php \n\n", LOCK_EX);
+        $stell->make();
         break;
     case 'migrate':
-        echo 'migrate';
+        $stell->migrate();
         break;
     default:
-        echo "\033[31m Hello, it`s stell. \033[0m Helper for opencart migrations \n";
-
-echo PHP_EOL;
-echo '       /‾‾‾‾‾‾‾‾/ |‾‾‾‾‾‾‾‾‾‾‾|  |‾‾‾‾‾‾‾‾‾‾|  |‾‾|         |‾‾|        ' . PHP_EOL;
-echo '      /  ___   /  |____   ____|  |          |  |  |         |  |        ' . PHP_EOL;
-echo '     /  /  /__/        |  |      |   |‾‾‾‾‾‾   |  |         |  |        ' . PHP_EOL;
-echo '     \  \              |  |      |   |         |  |         |  |        ' . PHP_EOL;
-echo '      \  \             |  |      |    ‾‾‾‾‾‾|  |  |         |  |        ' . PHP_EOL;
-echo '       \  \            |  |      |   |‾‾‾‾‾‾   |  |         |  |        ' . PHP_EOL;
-echo '  |‾‾|  \  \           |  |      |   |         |  |         |  |        ' . PHP_EOL;
-echo '  |  |___|  |          |  |      |    ‾‾‾‾‾‾|  |   ‾‾‾‾‾‾‾| |   ‾‾‾‾‾‾‾|' . PHP_EOL;
-echo '  |_________/          |__|      |__________|  |__________| |__________|' . PHP_EOL;
-
-
-
-
-        echo "\033[32m Stell \033[0m version \033[33m 1.0.0 \033[0m \n";
+        $stell->help();
         break;
-
 }
