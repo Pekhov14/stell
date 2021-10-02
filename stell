@@ -5,7 +5,7 @@ require_once(__DIR__ . '/../config.php');
 require_once(__DIR__ . '/src/Stell.php');
 
 $code = (isset($argv[1]) ? $argv[1] : '');
-$stell = new Stell(__DIR__);
+$stell = new Stell(__DIR__ . '/../');
 
 switch($code) {
     case 'make':

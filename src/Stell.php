@@ -3,7 +3,7 @@
 
 class Stell
 {
-    const VERSION = '1.0.8';
+    const VERSION = '1.0.9';
 
     private $appDir;
 
@@ -26,12 +26,12 @@ class Stell
             mkdir($sqlDir, 0777, true);
         }
 
-        $handle = file_put_contents($sqlDir . "/$fileName.php", "<?php \n\n", LOCK_EX);
+        $handle = file_put_contents($sqlDir . "/$fileName.php", "<?php \r\n\r\n", LOCK_EX);
 
     }
     public function migrate()
     {
-        echo 'migrate from Stell';
+        echo 'migrate from Stell' . PHP_EOL;
     }
     public function help()
     {
@@ -48,6 +48,6 @@ class Stell
         echo '  |  |___|  |          |  |      |    ‾‾‾‾‾‾|  |   ‾‾‾‾‾‾‾| |   ‾‾‾‾‾‾‾|' . PHP_EOL;
         echo '  |_________/          |__|      |__________|  |__________| |__________|' . PHP_EOL;
 
-        echo "\033[32m Stell \033[0m version \033[33m self::VERSION \033[0m \n";
+        echo "\033[32m Stell \033[0m version \033[33m " . self::VERSION . " \033[0m \n";
     }
 }
