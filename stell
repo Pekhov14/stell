@@ -7,7 +7,7 @@ require_once(__DIR__ . '/src/Stell.php');
 $code = (isset($argv[1]) ? $argv[1] : '');
 $stell = new Stell(__DIR__);
 
-switch($argv[1]) {
+switch($code) {
     case 'make':
         $stell->make();
         break;

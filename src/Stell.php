@@ -3,6 +3,8 @@
 
 class Stell
 {
+    const VERSION = '1.0.8';
+
     private $appDir;
 
     public function __construct($dir)
@@ -16,7 +18,7 @@ class Stell
 
         $fileName = 'update' . date('Y-m-d');
 
-        echo "created file for migration - \033[32m  $fileName \033[0m " . PHP_EOL;
+        echo "created file for migration -\033[32m $fileName \033[0m " . PHP_EOL;
 
         $sqlDir = $this->appDir . '/sql';
 
@@ -46,6 +48,6 @@ class Stell
         echo '  |  |___|  |          |  |      |    ‾‾‾‾‾‾|  |   ‾‾‾‾‾‾‾| |   ‾‾‾‾‾‾‾|' . PHP_EOL;
         echo '  |_________/          |__|      |__________|  |__________| |__________|' . PHP_EOL;
 
-        echo "\033[32m Stell \033[0m version \033[33m 1.0.7 \033[0m \n";
+        echo "\033[32m Stell \033[0m version \033[33m self::VERSION \033[0m \n";
     }
 }
