@@ -1,7 +1,11 @@
 #!/usr/bin/php
 <?php
 
-// v1.0.4
+// v1.0.6
+
+//require_once(__DIR__ . '/../config.php');
+
+$code = (isset($argv[1]) ? $argv[1] : '');
 
 switch($argv[1]) {
     case 'make':
@@ -9,7 +13,7 @@ switch($argv[1]) {
 
         $fileName = 'update' . date('Y-m-d');
 
-        echo 'created file for migration - ' . $fileName . PHP_EOL;
+        echo "created file for migration - \033[32m  $fileName \033[0m " . PHP_EOL;
 
         if (!file_exists(__DIR__ . '/sql')) {
             mkdir(__DIR__ . '/sql', 0777, true);
