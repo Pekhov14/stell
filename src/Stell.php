@@ -1,15 +1,18 @@
 <?php
 
+require_once 'DB.php';
 
 class Stell
 {
-    const VERSION = '1.0.9';
+    const VERSION = '1.0.10';
 
+    private $db;
     private $appDir;
 
     public function __construct($dir)
     {
         $this->appDir = $dir;
+        $this->db = new DB();
     }
 
     public function make()
@@ -29,10 +32,18 @@ class Stell
         $handle = file_put_contents($sqlDir . "/$fileName.php", "<?php \r\n\r\n", LOCK_EX);
 
     }
+
     public function migrate()
     {
+//        var_dump($this->db->getLastUpdate());
+
+        # Get all files
+        # sortable files
+        # Inserting in loop
+
         echo 'migrate from Stell' . PHP_EOL;
     }
+
     public function help()
     {
         echo "\033[31m Hello, it`s stell. \033[0m Helper for opencart migrations \n";
