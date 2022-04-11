@@ -1,6 +1,6 @@
 ### Functionality
 
-- [X] Create file form migration
+- [X] Create file for migration (with timestamp)
 - [ ] Execute migration
 - [X] colored output 'help'
 - [ ] Clear table
@@ -14,3 +14,5 @@
 - [ ] usr autoload
 - [ ] use Registry from opencart
 - [ ] add name last update 
+- [ ] Add functionality for changing password in user (using md5)
+- [ ] Change to sysmfony component colsole
