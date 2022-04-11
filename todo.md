@@ -2,7 +2,7 @@
 
 - [X] Create file for migration (with timestamp)
 - [ ] Execute migration
-- [X] colored output 'help'
+- [X] colored output
 - [ ] Clear table
 - [ ] Create new table
 - [ ] Delete table
@@ -15,4 +15,4 @@
 - [ ] use Registry from opencart
 - [ ] add name last update 
 - [ ] Add functionality for changing password in user (using md5)
-- [ ] Change to symfony component colsole
+- [X] Change to symfony component console

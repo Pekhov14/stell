@@ -1,4 +1,4 @@
-# Hello, it`s stell.
+# Hello, it`s Stell.
 ## Helper for opencart migrations.
 
 ## Installing

@@ -1,19 +1,14 @@
 #!/usr/bin/php
+
 <?php
 
-require_once(__DIR__ . '/src/Stell.php');
+use Symfony\Component\Console\Application;
 
-$code = (isset($argv[1]) ? $argv[1] : '');
-$stell = new Stell(__DIR__ . '/../');
+require __DIR__ . '/vendor/autoload.php';
 
-switch($code) {
-    case 'make':
-        $stell->make();
-        break;
-    case 'migrate':
-        $stell->migrate();
-        break;
-    default:
-        $stell->help();
-        break;
-}
+$stell = new Application('Stell', '1.0.11');
+
+# All commands
+$stell->add(new MakeCommand());
+
+$stell->run();
