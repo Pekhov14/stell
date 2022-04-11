@@ -5,7 +5,14 @@
     "type": "liibrary",
     "license": "MIT",
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "symfony/console": "5.4.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
     "scripts": {
         "post-autoload-dump": [
             "cp -r vendor/pekhov/stell bin"
