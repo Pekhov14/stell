@@ -15,4 +15,4 @@
 - [ ] use Registry from opencart
 - [ ] add name last update 
 - [ ] Add functionality for changing password in user (using md5)
-- [ ] Change to sysmfony component colsole
+- [ ] Change to symfony component colsole
